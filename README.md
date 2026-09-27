@@ -62,13 +62,21 @@ Input Inspection Image: 256x256]
 
 
 ├── train_all_categories_rd.py   # Full benchmark automation script across all classes
+
 ├── run_inference.py             # Interactive inference & defect overlay generator
+
 ├── setup_dataset.py             # Dataset verification & formatting utility
+
 ├── demo_results/                # Metric reports and sample defect visualizations
+
 │   ├── benchmark_summary.json   # Machine-readable performance metrics
+
 │   ├── heatmaps/                # Side-by-side reconstruction residual visuals
+
 │   └── live_predictions/       # Real-time PASS/FAIL inference predictions
+
 └── README.md                    # Project documentation
+
 
 
 ---
