@@ -26,31 +26,33 @@ Each category was evaluated independently to eliminate cross-domain feature inte
 ## Architectural Architecture & Methodology
 
 
+## Architectural Workflow & Methodology
 
-Input Inspection Image: 256x256]
-│
-▼
+```text
+[Input Inspection Image: 256x256]
+                │
+                ▼
 ┌───────────────────────────────────────────┐
 │ Teacher Encoder (Frozen WideResNet-50-2)  │ ──► Multi-scale features (layer1, layer2, layer3)
 └───────────────────────────────────────────┘
-│
-▼
+                │
+                ▼
 ┌───────────────────────────────────────────┐
 │     Multi-Scale Bottleneck (OC-KD)        │
 └───────────────────────────────────────────┘
-│
-▼
+                │
+                ▼
 ┌───────────────────────────────────────────┐
 │   Student Decoder (Trained on Nominals)   │ ──► Reconstructive nominal feature synthesis
 └───────────────────────────────────────────┘
-│
-▼
-[Reconstruction Error Residual Map]
-│
-┌────────┴────────┐
-▼                 ▼
+                │
+                ▼
+   [Reconstruction Error Residual Map]
+                │
+       ┌────────┴────────┐
+       ▼                 ▼
 [Pixel-level Heatmap] [PASS / FAIL Decision]
-
+```
 
 - **One-Class Knowledge Distillation:** The student decoder is trained exclusively on defect-free nominal images, learning the manifold of anomaly-free components.
 - **Continuous Manifold Alignment:** Overcomes the spatial and nearest-neighbor coreset clustering degradation typical of high-density repeating circuitry on printed circuit boards.
@@ -60,25 +62,16 @@ Input Inspection Image: 256x256]
 
 ## Repository Structure
 
-
+```text
 ├── train_all_categories_rd.py   # Full benchmark automation script across all classes
-
 ├── run_inference.py             # Interactive inference & defect overlay generator
-
 ├── setup_dataset.py             # Dataset verification & formatting utility
-
 ├── demo_results/                # Metric reports and sample defect visualizations
-
 │   ├── benchmark_summary.json   # Machine-readable performance metrics
-
 │   ├── heatmaps/                # Side-by-side reconstruction residual visuals
-
 │   └── live_predictions/       # Real-time PASS/FAIL inference predictions
-
 └── README.md                    # Project documentation
-
-
-
+```
 ---
 
 ## Quickstart & Usage
