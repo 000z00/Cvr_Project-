@@ -1,0 +1,32 @@
+{
+    "metal_nut": {
+        "image_AUROC": 0.9945054650306702,
+        "image_F1Score": 0.7272727489471436,
+        "dataset": "mvtec"
+    },
+    "screw": {
+        "image_AUROC": 0.9331797957420349,
+        "image_F1Score": 0.23999999463558197,
+        "dataset": "mvtec"
+    },
+    "pcb1": {
+        "image_AUROC": 0.9689401388168335,
+        "image_F1Score": 0.707317054271698,
+        "dataset": "visa"
+    },
+    "pcb2": {
+        "image_AUROC": 0.960829496383667,
+        "image_F1Score": 0.6875,
+        "dataset": "visa"
+    },
+    "pcb3": {
+        "image_AUROC": 0.9510138630867004,
+        "image_F1Score": 0.6835442781448364,
+        "dataset": "visa"
+    },
+    "pcb4": {
+        "image_AUROC": 0.9985713958740234,
+        "image_F1Score": 0.9278350472450256,
+        "dataset": "visa"
+    }
+}

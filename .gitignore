@@ -1,0 +1,17 @@
+# Environments & Cache
+cvl_env/
+__pycache__/
+*.pyc
+
+# Heavy Datasets
+Dataset/
+unified_dataset/
+
+# Heavy Checkpoints (>100MB blocked by GitHub)
+*.ckpt
+*.pth
+*.safetensors
+results/
+archive/
+*.7z
+*.zip
